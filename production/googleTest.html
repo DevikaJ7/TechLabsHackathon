@@ -1,0 +1,77 @@
+<html>
+
+<head>
+  <title>Travel Modes in Directions</title>
+  <style>
+    #map {
+      height: 100%;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #floating-panel {
+      position: absolute;
+      top: 10px;
+      left: 25%;
+      z-index: 5;
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid #999;
+      text-align: center;
+      font-family: "Roboto", "sans-serif";
+      line-height: 30px;
+      padding-left: 10px;
+    }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- playground-hide -->
+  <script>
+    const process = { env: {} };
+    process.env.GOOGLE_MAPS_API_KEY =
+      "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
+  </script>
+  <!-- playground-hide-end -->
+
+  <!-- <link rel="stylesheet" type="text/css" href="./style.css" /> -->
+  <!-- <script type="module" src="./index.js"></script> -->
+
+</head>
+
+<body>
+  <div id="floating-panel">
+    <div>
+      <div><input type="text" id="from" placeholder="Origin"></div>
+    </div>
+    <div>
+      <div><input type="text" id="to" placeholder="Destination"></div>
+    </div>
+
+    <b>Mode of Travel: </b>
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+  </div> <!--floating-panel -->
+
+  <div id="map"></div>
+
+  <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+    defer></script>
+    <script src="googleMapAPI.js"></script>
+</body>
+
+</html>
