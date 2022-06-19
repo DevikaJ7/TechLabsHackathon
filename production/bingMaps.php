@@ -121,8 +121,8 @@
                 var directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
                 // Set Route Mode to transit
                 directionsManager.setRequestOptions({ routeMode: Microsoft.Maps.Directions.RouteMode.transit });
-                var waypoint1 = new Microsoft.Maps.Directions.Waypoint({ address: 'Redmond', location: new Microsoft.Maps.Location(47.67683029174805, -122.1099624633789) });
-                var waypoint2 = new Microsoft.Maps.Directions.Waypoint({ address: 'Seattle', location: new Microsoft.Maps.Location(47.59977722167969, -122.33458709716797) });
+                var waypoint1 = new Microsoft.Maps.Directions.Waypoint({ address: 'Ponttor', location: new Microsoft.Maps.Location(51.5136, 7.4653) });
+                var waypoint2 = new Microsoft.Maps.Directions.Waypoint({ address: 'Bushof', location: new Microsoft.Maps.Location(50.7773, 6.0902) });
                 directionsManager.addWaypoint(waypoint1);
                 directionsManager.addWaypoint(waypoint2);
                 // Set the element in which the itinerary will be rendered
